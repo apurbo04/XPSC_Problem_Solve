@@ -13,31 +13,28 @@
 using namespace std;
 void solve()
 {
-     int n, cnt0 = 0, greater = 0, one = 0;
+     int n;
      in n;
+     vector<int> v(n);
+     int cnt_0 = 0, cnt_1 = 0;
+     int mx = 0;
      for (int i = 0; i < n; i++)
      {
-          int x;
-          in x;
-          if (x == 0)
-               cnt0++;
-          if (x == 1)
-               one = 1;
-          if (x > 1)
-               greater = 1;
+          in v[i];
+          if (v[i] == 0)
+               cnt_0++;
+          else
+               cnt_1++;
+
+          mx = max(mx, v[i]);
      }
-     int not0 = n - cnt0;
-     if (cnt0 > not0 + 1)
+     if ((n - cnt_0) >= (cnt_0 - 1))
      {
-          if (one == 0)
-               ot 1 nd else
-               {
-                    if (greater)
-                         ot 1 nd else 2 nd
-               }
+          ot 0 nd return;
      }
-     else
-          ot 0 nd
+
+     if (mx > 1 || mx == 0)
+          ot 1 nd else ot 2 nd
 }
 int main()
 {
