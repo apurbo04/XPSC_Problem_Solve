@@ -7,14 +7,14 @@
 #define vt   \
    int n;    \
    cin >> n; \
-   vector<int> v(n)
+   vector<int> v(n+1)
 #define nd << '\n'
 
 using namespace std;
 void solve()
 {
    vt;
-   for (int i = 1; i < n; i++)
+   for (int i = 1; i <= n; i++)
    {
       in v[i];
    }
